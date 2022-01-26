@@ -22,7 +22,7 @@ Cypress._.times(1,() => {
 			.get('#signin-btn').click()
 
 		}) 
-		it('Account Management Page', function() {
+		it('Stress Testing on Dashboard Page', function() {
 			cy.wait('@userLogin').should('have.property', 'status', 200)
 			//cy.wait('@accountMgnt').should('have.property', 'status', 200)
 			cy.get('.row > :nth-child(1) > h2').should('contain','Account Management')
