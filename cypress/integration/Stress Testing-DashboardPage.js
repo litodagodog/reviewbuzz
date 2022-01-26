@@ -1,5 +1,5 @@
 
-Cypress._.times(1,() => {
+Cypress._.times(50,() => {
 	describe('Super Admin Page', function() {
 		function customerName_Alpha_Numeric() {
 			var text = "";
@@ -14,7 +14,7 @@ Cypress._.times(1,() => {
 			cy.viewport(1280, 720)
 			cy.server()
 			cy.route('POST', '/user/authenticate').as('userLogin')
-			cy.route('GET','/api/v1/client/5be9eaa8ca50da00231cd33d/review/summary?report**').as('filters') //filterXHR result
+			cy.route('GET','/api/v1/client/5cd4d7cb2ff63300292edd81/review/summary?report**').as('filters') //filterXHR result
 			cy.route('GET','/api/v1/warehouse-status').as('warehouseStatus')
 			cy.visit('/')
 			.get('#email').type('lito+superadmin@lanexus.com')
