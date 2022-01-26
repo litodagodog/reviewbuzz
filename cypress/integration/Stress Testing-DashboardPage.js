@@ -46,11 +46,11 @@ Cypress._.times(1,() => {
 			cy.get('#period-filter-dropdown > div > a:nth-child(5)').click({force:true})
 			cy.wait('@filters').should('have.property', 'status', 200)
 			cy.wait(10000)
-			//SIGN-OUT CLIENT ADMIN
-			cy.get('.sign-out-container > a > span').click({force:true})
-			//SIGN-OUT SUPER ADMIN
-			cy.wait(5000)
-			cy.get('a > span').click()
+			// //SIGN-OUT CLIENT ADMIN
+			// cy.get('.sign-out-container > a > span').click({force:true})
+			// //SIGN-OUT SUPER ADMIN
+			// cy.wait(5000)
+			// cy.get('a > span').click()
 		})
 	
 	})
