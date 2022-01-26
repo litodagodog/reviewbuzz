@@ -1,7 +1,8 @@
 {
   "requires": true,
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "start": "npm start"
   },
   "lockfileVersion": 1,
   "dependencies": {
