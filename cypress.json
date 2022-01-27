@@ -1,7 +1,7 @@
 {
   "baseUrl": "https://management.rbfeedback.com",
   "trashAssetsBeforeRuns": false,
-  "pageLoadTimeout": 80000,
+  "pageLoadTimeout": 100000,
   "projectId": "g8zhwx",
   "chromeWebSecurity": false,
   "env": {
