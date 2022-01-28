@@ -1,16 +1,7 @@
 
 Cypress._.times(1,() => {
-	describe('Super Admin Page', function() {
-		function customerName_Alpha_Numeric() {
-			var text = "";
-			var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-			for (var i = 0; i < 10; i++)
-			text += possible.charAt(Math.floor(Math.random() * possible.length));
-			return text;
-		} 
+	describe('Stress Testing Dashboard Page', function() {
 		before(function () {
-			//cy.viewport(1024, 768)
 			cy.viewport(1280, 720)
 			cy.server()
 			cy.route('POST', '/user/authenticate').as('userLogin')
@@ -22,16 +13,12 @@ Cypress._.times(1,() => {
 			.get('#signin-btn').click()
 
 		}) 
-		it('Stress Testing on Dashboard Page', function() {
+		it('Check Dashboard Page', function() {
 			cy.wait('@userLogin').should('have.property', 'status', 200)
-			//cy.wait('@accountMgnt').should('have.property', 'status', 200)
 			cy.get('.row > :nth-child(1) > h2').should('contain','Account Management')
 			cy.get('#clients-tab > .search-options-cont > :nth-child(2) > .checkmark').click({force:true})
 			cy.get('#clients-tab > .search-options-cont > :nth-child(3) > .checkmark').click({force:true})
 			cy.get('#clients-tab > .multiselect > .multiselect__tags > .multiselect__input').type('5be9eaa8ca50da00231cd33d') //PROD
-			//cy.get('#clients-tab > .multiselect > .multiselect__tags > .multiselect__input').type('5cd4d7cb2ff63300292edd81') //STG
-			//cy.get('#clients-tab > .multiselect > .multiselect__tags > .multiselect__input').type('5bd7d4d520116100237fcd4c') //QA
-			//cy.wait('@searchByClientID').should('have.property', 'status', 200)
 			cy.get('#clients-tab > .multiselect > .multiselect__tags > .multiselect__input').invoke('val').as('client_id')
 			cy.get('@client_id').then((clientID) => {
 				const client_id = clientID
