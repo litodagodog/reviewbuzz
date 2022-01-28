@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://management.rbfeedback.com",
+  "baseUrl": "https://management.staging.rbfeedback.com",
   "trashAssetsBeforeRuns": false,
   "pageLoadTimeout": 100000,
   "projectId": "g8zhwx",
