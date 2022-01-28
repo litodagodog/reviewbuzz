@@ -1,5 +1,5 @@
 
-Cypress._.times(1,() => {
+Cypress._.times(10,() => {
 	describe('Stress Testing Reviews Page', function() {
 		before(function () {
 			cy.viewport(1280, 720)
