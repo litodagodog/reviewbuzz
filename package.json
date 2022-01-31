@@ -1,6 +1,0 @@
-{
-  "lockfileVersion": 1,
-  "devDependencies": {
-    "cypress": "^9.3.1"
-  }
-}
