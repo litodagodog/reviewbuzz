@@ -16,4 +16,4 @@ jobs:
         with:
           # Disable running of tests within install job
           runTests: false
-          build: yarn build
+          run: yarn build:ci
