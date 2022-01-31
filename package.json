@@ -20,7 +20,6 @@
     "test:headless": "yarn cypress:run",
     "test:api": "yarn cypress:run --spec 'cypress/tests/api/*'",
     "test:unit": "react-scripts test --runInBand",
-    "test:unit:ci": "react-scripts test --watchAll false --ci --runInBand",
-
+    "test:unit:ci": "react-scripts test --watchAll false --ci --runInBand"
    }
 }
