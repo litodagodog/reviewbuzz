@@ -2,5 +2,10 @@
   "devDependencies": {
     "cypress": "^9.3.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/litodagodog/reviewbuzz.git"
+  },
+  "license": "MIT",
   "private": true
 }
