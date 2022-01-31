@@ -1,15 +1,15 @@
 {
-  "name": "ReviewBuzz cypress CI",
+  "name": "ReviewBuzz CI",
   "version": "1.0.0",
-  "description": "Running ReviewBuzz CI",
+  "description": "ReviewBuzz CI Scripts",
   "repository": {
     "type": "git",
     "url": "https://github.com/litodagodog/reviewbuzz.git"
   },
-  "author": "Lito Dagodsog",
+  "author": "Cypress DX Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/litodagodog/reviewbuzz/issues"
+    "url": "https://github.com/litodagodog/reviewbuzz.git/issues"
   },
   "engines": {
     "node": ">=12"
