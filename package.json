@@ -10,6 +10,17 @@
   "private": true,
   "scripts": {
    "types": "tsc --noEmit",
-    "prebuild": "yarn types"
+    "prebuild": "yarn types",
+    "start": "cross-env NODE_ENV=development concurrently yarn:start:react yarn:start:api",
+    "start:ci": "cross-env NODE_ENV=test concurrently yarn:start:react:proxy-server yarn:start:api",
+    "prestart:ci": "yarn predev:cognito:ci",
+    "start:react": "react-scripts -r @cypress/instrument-cra start",
+    "start:empty": "cross-env NODE_ENV=development EMPTY_SEED=true concurrently yarn:start:react yarn:start:api:watch",
+    "test": "yarn cypress:open",
+    "test:headless": "yarn cypress:run",
+    "test:api": "yarn cypress:run --spec 'cypress/tests/api/*'",
+    "test:unit": "react-scripts test --runInBand",
+    "test:unit:ci": "react-scripts test --watchAll false --ci --runInBand",
+
    }
 }
