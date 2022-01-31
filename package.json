@@ -7,5 +7,9 @@
     "url": "https://github.com/litodagodog/reviewbuzz.git"
   },
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+   "types": "tsc --noEmit",
+    "prebuild": "yarn types"
+   }
 }
