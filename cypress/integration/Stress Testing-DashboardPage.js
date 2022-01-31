@@ -1,5 +1,5 @@
 
-Cypress._.times(50,() => {
+Cypress._.times(1,() => {
 	describe('Stress Testing Dashboard Page', function() {
 		before(function () {
 			cy.viewport(1280, 720)
